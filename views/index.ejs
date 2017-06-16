@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/css/bootstrap.min.css' />
+    <link rel='stylesheet' href='/css/stylish-portfolio.css' />
+    <link rel='stylesheet' href='font-awesome/css/font-awesome.min.css' />
+    
+    	<!-- jQuery -->
+    <script src="/js/jquery.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+    <script src="/angular/controller.js"></script>	
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body ng-app="myApp" ng-controller="myCtrl">
+
+    <!-- Navigation -->
+    
+
+    <!-- Header -->
+    <header id="top" class="header">
+        <div class="text-vertical-center">
+            <h1><%= title %></h1>
+            </br>
+            <p>Welcome to <%= title %></p>
+            </br>
+            <form>
+            <div class="row">
+	        <div class="col-lg-3"></div>
+	        <div class="col-lg-6">
+	            <div class="input-group">
+	              <input type="text" ng-model="url" class="form-control" autofocus ="on" placeholder="Enter URL here" id="basic-url" aria-describedby="basic-addon3">
+	            </span>
+	            <br>
+	            <span class="input-group-btn">
+	            <button type="button" ng-click="submit()" class="btn btn-primary">GET NEW URL</button>
+	            </span>
+	          </div>
+		   </div>
+		   <div class="col-lg-3"></div>
+		   </div><!-- /.row -->
+		   </form>
+           <br>
+        </div>
+    </header>
+
+    
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h4><strong>TryURL</strong>
+                    </h4>
+                    <p>201 S 4th Street
+                        <br>San Jose, CA 95112</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-phone fa-fw"></i> (408) 668-4854</li>
+                        </li>
+                    </ul>
+                    <br>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
+                        </li>
+                    </ul>
+                    <hr class="small">
+                    <p class="text-muted">Copyright &copy; Akshay Hedau</p>
+                </div>
+            </div>
+        </div>
+        <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+    </footer>
+
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script>
+    // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    //#to-top button appears after scrolling
+    var fixed = false;
+    $(document).scroll(function() {
+        if ($(this).scrollTop() > 250) {
+            if (!fixed) {
+                fixed = true;
+                // $('#to-top').css({position:'fixed', display:'block'});
+                $('#to-top').show("slow", function() {
+                    $('#to-top').css({
+                        position: 'fixed',
+                        display: 'block'
+                    });
+                });
+            }
+        } else {
+            if (fixed) {
+                fixed = false;
+                $('#to-top').hide("slow", function() {
+                    $('#to-top').css({
+                        display: 'none'
+                    });
+                });
+            }
+        }
+    });
+    </script>
+    
+    <script type="text/javascript">
+    <!-- google_ad_client = "pub-UNIQUE_NUMBER";
+    /* 300x250, created 29/03/10 */
+    google_ad_slot = "11111111";
+    google_ad_width = 300;
+    google_ad_height = 250;
+    //-->
+    </script>
+    <script type="text/javascript" src="http://pagead2.googlesyndication.
+    com/pagead/show_ads.js">
+    </script>
+
+</body>
+
+</html>
